@@ -1,0 +1,78 @@
+$gray: gainsboro
+$red: tomato
+$blue: deepskyblue
+
+html
+  box-sizing: border-box
+
+*
+  box-sizing: inherit
+
+body
+  margin: 0
+  font-family: 'Open Sans', sans-serif
+  font-weight: 300
+
+// becomes a flex item because child of flex box
+// when 
+.box 
+  color: #fff
+  font-size: 48px
+  text-align: center
+  text-shadow: 2px 2px 2px rgba(#000, 0.1)
+  padding: 10px
+  border: 1px solid black
+
+@for $i from 1 through 10
+  $color: adjust-hue(mix($gray, $red, $i * 10%), -50 + $i * 10deg)
+  .box#{$i}
+    color: darken($color, 25%)
+    background-color: $color
+    border-color: darken($color, 10%)
+
+// 
+// flex box things below
+// 
+
+// flex container
+.container
+  border: 5px solid complement($red)
+  // min-height: 100vh
+  height: 100vh
+  display: flex
+  // flex-direction: row // default: row, or column, *-reverse
+  // flex-wrap: wrap // default: nowrap, or wrap, wrap-reverse
+  // justify-content: flex-start // default: flex-start, or *-end, center, space-between: divvies up space nicely, space-around: same as previous but adds space around first and last
+  // align-content: flex-start // default: stretch, flex-start, flex-end, center, space-between, space-around; only concerned with cross axis, what do I do with vertical content? needs wrapped items with flex-wrap: wrap
+  // flex-direction: column // default: row or column, switches main axis, use with justify-content
+  // align-items: center // default: stretch, center to vcenter, flex-start, flex-end, baseline: lines up text
+
+.box
+  flex: 1 // how to scale with extra/not enough space with respect to siblings
+  // width: 200px
+  // width: calc(100% / 3)
+  // flex-grow: 1
+  // flex-basis: 250px
+
+// .box1
+  // flex: 3 3 400px // takes up 4x as much space as flex: 1; also shorthand for the following
+  // flex-grow: 1 // default: 0, don't grow by default; how to manage extra space
+  // flex-shrink: 2 // default: 1; shrink by default, higher number is how much more of myself do I give up?
+  // flex-basis: 250px // ideal size when enough space
+
+// .box2
+  // flex-basis: 100px
+  // flex-grow: 3
+
+// .box3
+//   order: 5 // default: 0, > 0 pushed to end of axis, higher order brought to the end, < 0 pulled to beginning
+
+// .box7
+//   order: -2
+//   align-self: flex-end // override align-items on specific flex item
+
+// .box8
+//   order: 1
+
+.hidden
+  display: none

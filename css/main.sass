@@ -1,0 +1,79 @@
+html
+  box-sizing: border-box
+  height: 100%
+
+*, *:before, *:after
+  box-sizing: inherit
+
+body
+  height: 100%
+  margin: 0
+  background: linear-gradient(135deg, #DE6262 10%, #FFB88C 90%)
+  background-repeat: no-repeat
+  background-attachment: fixed
+  font-family: 'Open Sans', sans-serif
+  font-weight: 300
+  color: #fff
+
+p
+  line-height: 1.6
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 25px
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+  margin: 0 auto
+
+.flex-nav
+  ul // flex-container
+    display: flex
+    margin: 0
+    padding: 0
+  li // flex-items
+    list-style: none
+    flex: 2
+  a
+    display: block
+    padding: 20px 10px
+    background-color: rgba(#000, 0.1)
+    color: #fff
+    text-decoration: none
+    text-align: center
+    letter-spacing: 1px
+    transition: background-color .2s ease
+    &:hover
+      background-color: rgba(#000, 0.3)
+  .social
+    flex: 1
+  .toggle-nav
+    display: none
+
+@media all and (max-width: 900px)
+  .flex-nav
+    ul
+      flex-wrap: wrap
+    li
+      flex: 1 1 50%
+    .social
+      flex-basis: 25%
+
+@media all and (max-width: 600px)
+  .container
+    padding: 10px
+
+  .flex-nav
+    ul
+      display: none
+    li
+      flex-basis: 100%
+    a
+      padding: 15px 10px
+    .toggle-nav
+      display: block
+      &.is-active + ul
+        display: flex

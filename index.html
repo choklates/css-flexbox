@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Flexbox</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav class="flex-nav">
+        <a href="#" class="toggle-nav"><span class="fa fa-navicon"></span> Menu</a>
+        <ul>
+          <li>
+            <a href="#">Item 01</a>
+          </li>
+          <li>
+            <a href="#">Item 02</a>
+          </li>
+          <li>
+            <a href="#">Item 03</a>
+          </li>
+          <li>
+            <a href="#">Item 04</a>
+          </li>
+          <li>
+            <a href="#">Item 05</a>
+          </li>
+          <li>
+            <a href="#">Item 06</a>
+          </li>
+          <li class="social">
+            <a href="#"><span class="fa fa-twitter"></span></a>
+          </li>
+          <li class="social">
+            <a href="#"><span class="fa fa-facebook"></span></a>
+          </li>
+          <li class="social">
+            <a href="#"><span class="fa fa-github"></span></a>
+          </li>
+          <li class="social">
+            <a href="#"><span class="fa fa-linkedin"></span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="container">
+      <img src="http://fillmurray.com/g/1200/500" class="img-responsive" alt="">
+    </div>
+
+    <div class="container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, doloremque laudantium unde reiciendis enim iusto adipisci quam expedita praesentium delectus aut odio dolorum quis alias molestias nihil natus vero eaque.</p>
+      <p>Obcaecati similique provident neque qui sunt laborum accusantium sed consequatur rerum dignissimos atque, et in dolores nam eligendi. Hic, cumque, dignissimos. Ex, optio. Ipsam saepe, aut sint, eveniet fuga id?</p>
+      <p>Dolore quos fugit dolorum qui sequi dolor laboriosam, fugiat debitis incidunt impedit obcaecati delectus, quibusdam iusto tenetur non ducimus eveniet! Corrupti totam, est facilis at aspernatur, magni pariatur. Ipsa, minus.</p>
+      <p>Cupiditate quisquam aspernatur, eligendi alias maiores voluptas laborum quos. Sunt quasi debitis quis nihil ipsam reiciendis architecto officia veritatis accusamus distinctio consectetur excepturi voluptates eaque enim, temporibus at maiores dolorum.</p>
+      <p>Aliquid magni esse quisquam quaerat maiores. Voluptatum magni optio, dolor eos consequatur sit et blanditiis at dolores odio aliquam odit animi ea quaerat velit aut, maxime ducimus ut voluptas sint.</p>
+      <p>Sequi atque inventore neque assumenda placeat, ipsam dolorum quasi voluptates maxime enim nisi obcaecati ratione asperiores laborum porro quaerat perferendis omnis modi minus ipsa, dolorem ut molestiae eaque! Corporis, nostrum.</p>
+      <p>Architecto, voluptas minus impedit nobis suscipit enim dolore laborum incidunt, officia a quis, similique saepe repellat ea, soluta adipisci odit excepturi non esse doloribus. Optio, neque, nihil. Rem, blanditiis, dolore!</p>
+      <p>Perferendis ducimus rem est laudantium voluptates, rerum hic minus ex sapiente nemo qui, culpa, repudiandae neque placeat expedita maxime eos quis cum. Dicta vero maxime, itaque labore inventore magni repellendus.</p>
+      <p>Quam qui voluptas minima quibusdam minus id ratione corporis architecto nobis. Facere minus corporis dignissimos maxime dolorem laboriosam aliquam ipsa sunt fugiat optio, sit, illum officiis commodi vitae tempore nam!</p>
+      <p>Provident reprehenderit, velit nihil necessitatibus nemo quia quasi aut sint et sit laboriosam facere officia illo architecto delectus laudantium, ad quibusdam quos rerum, debitis consequatur deleniti molestias ab. Non, quisquam!</p>
+    </div>
+
+  </main>
+
+  <script>
+    (function() {
+      var toggleNavLink = document.querySelector('.toggle-nav');
+      toggleNavLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+</body>
+</html>
